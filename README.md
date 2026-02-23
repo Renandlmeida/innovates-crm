@@ -45,3 +45,17 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
 acess http://127.0.0.1:8000
+
+## 📸 Screenshots
+
+### Login
+![Login](images/login.png)
+
+### Client Management
+![Clients](images/clients.png)
+
+### Create Client
+![New Client](images/new-client.png)
+
+### Dashboard
+![Dashboard](images/dashboard.png)
