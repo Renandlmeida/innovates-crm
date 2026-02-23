@@ -45,3 +45,6 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
 acess http://127.0.0.1:8000
+
+<img width="1903" height="942" alt="Captura de tela 2026-02-23 201121" src="https://github.com/user-attachments/assets/095065ee-ff9e-4fbc-9824-76a0fa3cbdce" />
+
