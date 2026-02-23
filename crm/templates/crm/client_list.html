@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h3 mb-0">Clientes</h1>
+    <div class="text-muted">Potencial total: <strong>{{ total_potential }}</strong></div>
+  </div>
+
+  <div class="card shadow-sm border-0 mb-3">
+    <div class="card-body">
+      <form method="get" class="row g-2">
+        <div class="col-md-5">
+          <input type="text" name="q" value="{{ q }}" class="form-control" placeholder="Buscar por nome, telefone ou email">
+        </div>
+        <div class="col-md-3">
+          <select name="status" class="form-select">
+            <option value="">Todos os status</option>
+            {% for value, label in status_choices %}
+              <option value="{{ value }}" {% if status == value %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-primary w-100" type="submit">Aplicar</button>
+        </div>
+        <div class="col-md-2">
+          <a class="btn btn-outline-secondary w-100" href="{% url 'crm:client_list' %}">Limpar</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="card shadow-sm border-0">
+    <div class="table-responsive">
+      <table class="table table-striped align-middle mb-0">
+      <thead>
+        <tr>
+          <th>
+            <a class="link-dark text-decoration-none" href="?q={{ q|urlencode }}&status={{ status|urlencode }}&sort=name&dir={% if sort == 'name' and dir != 'desc' %}desc{% else %}asc{% endif %}">
+              Nome
+            </a>
+          </th>
+          <th>Empresa</th>
+          <th>Status</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th class="text-end">
+            <a class="link-dark text-decoration-none" href="?q={{ q|urlencode }}&status={{ status|urlencode }}&sort=potential&dir={% if sort == 'potential' and dir != 'desc' %}desc{% else %}asc{% endif %}">
+              Potencial
+            </a>
+          </th>
+          <th style="width: 160px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in clients %}
+          <tr>
+            <td>{{ c.name }}</td>
+            <td>{{ c.company }}</td>
+            <td><span class="badge {{ c.status_badge_class }}">{{ c.get_status_display }}</span></td>
+            <td>{{ c.phone }}</td>
+            <td>{{ c.email }}</td>
+            <td class="text-end">{{ c.potential_value }}</td>
+            <td class="text-end">
+              <a class="btn btn-sm btn-outline-primary" href="{% url 'crm:client_update' c.pk %}">Editar</a>
+              <a class="btn btn-sm btn-outline-danger" href="{% url 'crm:client_delete' c.pk %}">Excluir</a>
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="7" class="text-center text-muted py-4">Nenhum cliente encontrado.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

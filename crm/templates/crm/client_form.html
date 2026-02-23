@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h3 mb-0">{% if mode == 'create' %}Novo Cliente{% else %}Editar Cliente{% endif %}</h1>
+    <a class="btn btn-outline-secondary" href="{% url 'crm:client_list' %}">Voltar</a>
+  </div>
+
+  <form method="post" class="card card-body">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label">Nome</label>
+        {{ form.name }}
+        <div class="text-danger small">{{ form.name.errors }}</div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Empresa</label>
+        {{ form.company }}
+        <div class="text-danger small">{{ form.company.errors }}</div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Telefone</label>
+        {{ form.phone }}
+        <div class="text-danger small">{{ form.phone.errors }}</div>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Email</label>
+        {{ form.email }}
+        <div class="text-danger small">{{ form.email.errors }}</div>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Status</label>
+        {{ form.status }}
+        <div class="text-danger small">{{ form.status.errors }}</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Origem do lead</label>
+        {{ form.lead_source }}
+        <div class="text-danger small">{{ form.lead_source.errors }}</div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Valor potencial</label>
+        {{ form.potential_value }}
+        <div class="text-danger small">{{ form.potential_value.errors }}</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Último contato</label>
+        {{ form.last_contact_at }}
+        <div class="text-danger small">{{ form.last_contact_at.errors }}</div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Próximo contato</label>
+        {{ form.next_contact_at }}
+        <div class="text-danger small">{{ form.next_contact_at.errors }}</div>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Observações</label>
+        {{ form.notes }}
+        <div class="text-danger small">{{ form.notes.errors }}</div>
+      </div>
+
+      <div class="col-12 d-flex gap-2">
+        <button class="btn btn-primary" type="submit">Salvar</button>
+        <a class="btn btn-outline-secondary" href="{% url 'crm:client_list' %}">Cancelar</a>
+      </div>
+    </div>
+  </form>
+{% endblock %}
