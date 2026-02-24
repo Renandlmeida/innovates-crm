@@ -1,24 +1,20 @@
-# Innovates CRM
+# 🚀 Innovates CRM
 
-Innovates CRM is a lightweight Customer Relationship Management (CRM) system built with Django.  
-It was designed to simulate real-world business scenarios such as lead management, pipeline tracking and revenue potential analysis.
+A lightweight Customer Relationship Management (CRM) system built with Django.
+
+Innovates CRM was designed to simulate real-world business environments, focusing on lead management, sales pipeline tracking and revenue analysis.
 
 ---
 
-## 🚀 Features
+## 🌟 Features
 
-- User authentication (login & logout)
-- Client CRUD (Create, Read, Update, Delete)
-- Lead status tracking:
-  - New
-  - In Progress
-  - Won
-  - Lost
-- Search by name, phone or email
-- Filter by status
-- Potential revenue calculation
-- Dashboard with summary data
-- Responsive UI built with Bootstrap
+- 🔐 User Authentication (Login / Logout)
+- 📋 Full Client CRUD
+- 🔎 Search by name, email or phone
+- 🎯 Status filtering (New, In Progress, Won, Lost)
+- 💰 Potential revenue calculation
+- 📊 Dashboard with summary metrics
+- 🎨 Responsive interface built with Bootstrap
 
 ---
 
@@ -31,7 +27,37 @@ It was designed to simulate real-world business scenarios such as lead managemen
 
 ---
 
-## 📦 Installation
+## 📸 Screenshots
+
+### 🔐 Login
+<p align="center">
+  <img src="images/login.png" width="70%">
+</p>
+
+---
+
+### 📋 Client Management
+<p align="center">
+  <img src="images/clients.png" width="85%">
+</p>
+
+---
+
+### ➕ Create Client
+<p align="center">
+  <img src="images/new-client.png" width="85%">
+</p>
+
+---
+
+### 📊 Dashboard
+<p align="center">
+  <img src="images/dashboard.png" width="85%">
+</p>
+
+---
+
+## ⚙️ Installation
 
 ```bash
 git clone https://github.com/Renandlmeida/innovates-crm.git
@@ -44,18 +70,3 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
-acess http://127.0.0.1:8000
-
-## 📸 Screenshots
-
-### Login
-![Login](images/login.png)
-
-### Client Management
-![Clients](images/clients.png)
-
-### Create Client
-![New Client](images/new-client.png)
-
-### Dashboard
-![Dashboard](images/dashboard.png)
