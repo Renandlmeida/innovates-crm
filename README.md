@@ -31,28 +31,28 @@ Innovates CRM was designed to simulate real-world business environments, focusin
 
 ### 🔐 Login
 <p align="center">
-  <img src="images/login.png" width="70%">
+  <img src="/images/login.png" width="70%">
 </p>
 
 ---
 
 ### 📋 Client Management
 <p align="center">
-  <img src="images/clients.png" width="85%">
+  <img src="/images/clients.png" width="85%">
 </p>
 
 ---
 
 ### ➕ Create Client
 <p align="center">
-  <img src="images/new-client.png" width="85%">
+  <img src="/images/new-client.png" width="85%">
 </p>
 
 ---
 
 ### 📊 Dashboard
 <p align="center">
-  <img src="images/dashboard.png" width="85%">
+  <img src="/images/dashboard.png" width="85%">
 </p>
 
 ---
