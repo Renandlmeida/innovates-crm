@@ -2,19 +2,20 @@
 
 A lightweight Customer Relationship Management (CRM) system built with Django.
 
-Innovates CRM simulates a real-world business environment, focusing on lead management, pipeline tracking and revenue analysis.
+Innovates CRM was developed to simulate a real-world business environment, focusing on lead management, sales pipeline tracking and revenue potential analysis.
 
 ---
 
 ## 🌟 Features
 
-- 🔐 User Authentication (Login / Logout)
-- 📋 Full Client CRUD
+- 🔐 Secure user authentication (Login / Logout)
+- 📋 Full Client CRUD (Create, Read, Update, Delete)
 - 🔎 Search by name, email or phone
 - 🎯 Status filtering (New, In Progress, Won, Lost)
-- 💰 Potential revenue calculation
+- 💰 Automatic potential revenue calculation
 - 📊 Dashboard with summary metrics
-- 🎨 Responsive interface built with Bootstrap
+- ⚠ Basic error handling
+- 🎨 Responsive UI built with Bootstrap
 
 ---
 
@@ -31,33 +32,40 @@ Innovates CRM simulates a real-world business environment, focusing on lead mana
 
 ### 🔐 Login
 <p align="center">
-  <img src="https://github.com/Renandlmeida/innovates-crm/blob/main/images/login.png?raw=1" width="70%">
+  <img src="https://github.com/Renandlmeida/innovates-crm/blob/main/images/teladelogin.png?raw=1" width="70%">
 </p>
 
 ---
 
-### 📋 Client Management
+### 📋 Client List
 <p align="center">
-  <img src="https://github.com/Renandlmeida/innovates-crm/blob/main/images/clients.png?raw=1" width="85%">
+  <img src="https://github.com/Renandlmeida/innovates-crm/blob/main/images/listadeclientes.png?raw=1" width="85%">
 </p>
 
 ---
 
-### ➕ Create Client
+### ➕ Add New Client
 <p align="center">
-  <img src="https://github.com/Renandlmeida/innovates-crm/blob/main/images/new-client.png?raw=1" width="85%">
+  <img src="https://github.com/Renandlmeida/innovates-crm/blob/main/images/adicionandonovocliente.png?raw=1" width="85%">
 </p>
 
 ---
 
-### 📊 Dashboard
+### 💰 Client Table with Revenue Calculation
 <p align="center">
-  <img src="https://github.com/Renandlmeida/innovates-crm/blob/main/images/dashboard.png?raw=1" width="85%">
+  <img src="https://github.com/Renandlmeida/innovates-crm/blob/main/images/tabelacomvalorpontencial.png?raw=1" width="85%">
 </p>
 
 ---
 
-## ⚙️ Installation
+### ⚠ Error Handling Example
+<p align="center">
+  <img src="https://github.com/Renandlmeida/innovates-crm/blob/main/images/tratamentoDeErro.png?raw=1" width="85%">
+</p>
+
+---
+
+## ⚙ Installation
 
 ```bash
 git clone https://github.com/Renandlmeida/innovates-crm.git
